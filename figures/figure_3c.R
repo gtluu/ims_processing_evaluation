@@ -1,20 +1,20 @@
 library(Cardinal)
-library(stringr)
-library(fuzzyjoin)
-library(dplyr)
 library(ggplot2)
-library(reticulate)
-kneed <- import('kneed')
-numpy <- import('numpy')
 
-# pseudo_list and lightdark should be loaded in already from previous analyses scripts
+image(lightdark[['ssc']], model=lightdark[['sscParams']], xlim=c(75, 275),
+      col=c('#39908C', '#B7DD00', '#77CD51', '#39678E', '#412D6D',
+            '#FAE500'))
 
-# Figure 3C
-image(ssc, model=ssc_params, xlim=c(75,100), ylim=c(50,130),
-      col=c('#FAE500', '#77CD51', '#39908C', '#414B8B'))
-lightdark_classes <- resultData(ssc, ssc_params)$class
-for (i in 1:max(levels(lightdark_classes))) {
+lightdarkClasses <- resultData(lightdark[['ssc']], lightdark[['sscParams']])$class
+for (i in 1:length(levels(lightdarkClasses))) {
   print(i)
-  print(length(lightdark_classes[which(lightdark_classes==i)]))
+  print(length(lightdarkClasses[which(lightdarkClasses==i)]))
+  print(' ')
+}
+
+lightdarkClasses <- resultData(sscPartial, lightdark[['sscParams']])$class
+for (i in 1:length(levels(lightdarkClasses))) {
+  print(i)
+  print(length(lightdarkClasses[which(lightdarkClasses==i)]))
   print(' ')
 }

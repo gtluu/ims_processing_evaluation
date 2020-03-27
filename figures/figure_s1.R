@@ -1,16 +1,10 @@
 library(Cardinal)
-library(stringr)
-library(fuzzyjoin)
-library(dplyr)
 library(ggplot2)
-library(reticulate)
-kneed <- import('kneed')
-numpy <- import('numpy')
 
-# pseudo_list and lightdark should be loaded in already from previous analyses scripts
+ssc <- as.data.frame(summary(pseudo2[['ssc']]))
+colnames(ssc) <- c('r', 'k', 's', 'classes', 'features_per_class')
 
-# Figure S1
-figure_s1 <- ggplot() +
+figureS1 <- ggplot() +
   xlab('sparsity (s)') +
   ylab('predicted # of segments') +
   geom_point(aes(x=ssc[,c('s', 'classes')][which(ssc$r==1 & ssc$k==2),]$s,
@@ -134,6 +128,7 @@ figure_s1 <- ggplot() +
   geom_line(aes(x=ssc[,c('s', 'classes')][which(ssc$r==3 & ssc$k==20),]$s,
                 y=ssc[,c('s', 'classes')][which(ssc$r==3 & ssc$k==20),]$classes,colour='r=3, k=20')) +
   labs(colour='Line')
-svg("Figure S1.svg", width=10.67, height=6)
-print(figure_s1)
+
+svg("figures1.svg", width=10.67, height=6)
+print(figureS1)
 dev.off()

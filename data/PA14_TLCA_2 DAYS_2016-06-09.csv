@@ -1,0 +1,5 @@
+﻿roi,condition,treated
+No_TLCA_Control,control,untreated
+250uM_TLCA_Control,tlca,untreated
+PA14,pseudomonas,untreated
+PA14_250uM_TLCA,pseudomonas_tlca,treated

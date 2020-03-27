@@ -1,0 +1,5 @@
+﻿roi,condition,treated
+MeOH,control,untreated
+TLCA,tlca,untreated
+PA14_MeOH,pseudomonas,untreated
+PA14_TLCA_,pseudomonas_tlca,treated

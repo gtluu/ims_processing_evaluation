@@ -1,0 +1,5 @@
+﻿roi,condition,treated
+03,control,untreated
+04,tlca,untreated
+01,pseudomonas,untreated
+02,pseudomonas_tlca,treated

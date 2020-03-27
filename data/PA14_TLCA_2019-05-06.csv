@@ -1,0 +1,6 @@
+﻿roi,condition,treated
+MeOH_Control,control,untreated
+TLCA_Control,tlca,untreated
+MeOH,pseudomonas,untreated
+TLCA,pseudomonas_tlca,treated
+Matrix,matrix,untreated

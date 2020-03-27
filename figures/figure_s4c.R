@@ -1,19 +1,15 @@
 library(Cardinal)
-library(stringr)
-library(fuzzyjoin)
-library(dplyr)
 library(ggplot2)
-library(reticulate)
-kneed <- import('kneed')
-numpy <- import('numpy')
 
-# pseudo_list and lightdark should be loaded in already from previous analyses scripts
+image(pseudo1[['ssc']], model=pseudo1[['sscParams']], xlim=c(10, 130),
+      col=c('#4DB777', '#39908C', '#FAE500', '#412D6D', '#77CD51',
+            '#39678E', '#B7DD00', '#433A84', '#414B8B', '#4000D2',
+            '#4DB788', '#39904E', '#FAE555', '#412D8B', '#77CD00',
+            '#39676B', '#B7DD50', '#433A77'))
 
-# Figure S4C
-image(pseudo_list[['pseudo1']][['ssc']], model=pseudo_list[['pseudo1']][['optimal_ssc_params']], xlim=c(10,90))
-pseudo1_classes <- resultData(pseudo_list[['pseudo1']][['ssc']], pseudo_list[['pseudo1']][['optimal_ssc_params']])$class
-for (i in 1:max(levels(pseudo1_classes))) {
+pseudo1Classes <- resultData(pseudo1[['ssc']], pseudo1[['sscParams']])$class
+for (i in 1:length(levels(pseudo1Classes))) {
   print(i)
-  print(length(pseudo1_classes[which(pseudo1_classes==i)]))
+  print(length(pseudo1Classes[which(pseudo1Classes==i)]))
   print(' ')
 }

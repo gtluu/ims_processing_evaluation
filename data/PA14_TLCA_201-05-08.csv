@@ -1,0 +1,5 @@
+﻿roi,condition,treated
+DMSO_Control,control,untreated
+TLCA_Control,tlca,untreated
+DMSO,pseudomonas,untreated
+TLCA,pseudomonas_tlca,treated

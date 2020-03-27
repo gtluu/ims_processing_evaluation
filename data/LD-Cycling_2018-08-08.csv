@@ -1,0 +1,7 @@
+﻿roi,condition
+A,light
+B,dark
+C,cycling
+A_Control,light_ctrl
+B_Control,dark_ctrl
+C_Control,cycling_ctrl
