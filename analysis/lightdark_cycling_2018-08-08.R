@@ -2,7 +2,7 @@
 # Set Workspace and Load in Libraries                                          #
 ################################################################################
 library(devtools)
-load_all('cardinal')
+library(Cardinal)
 load_all('cardinalscripts')
 library(stringr)
 library(fuzzyjoin)
